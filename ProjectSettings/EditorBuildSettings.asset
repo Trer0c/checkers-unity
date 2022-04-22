@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Menu.unity
+    guid: eaea29dee3ff93243867100805c84f09
+  - enabled: 1
+    path: Assets/Scenes/Game/GameForOne.unity
+    guid: 332df32f7e091264fbced998bf9ebd4d
+  - enabled: 1
+    path: Assets/Scenes/Game/GameForTwo.unity
+    guid: 19799907d2dc42a4ca3faa8683ce838f
+  - enabled: 1
+    path: Assets/Scenes/Game/GameOnline.unity
+    guid: beaa07efbd46ed143a1110d80d019892
   m_configObjects: {}
