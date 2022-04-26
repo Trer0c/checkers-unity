@@ -10,6 +10,9 @@ public class TileManager : MonoBehaviour
     private Vector3 _offset;
     private Vector3 _startPos;
     private Vector3 _activePos;
+    private float _distance;
+    private int _indexBoard;
+    private int _indexData;
 
     private void Awake()
     {
@@ -20,16 +23,22 @@ public class TileManager : MonoBehaviour
 
     private void OnMouseDown()
     {
-
+        _offset = _transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
+        _startPos = _transform.position;
     }
 
     private void OnMouseDrag()
     {
-
+        Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f);
+        _transform.position = Camera.main.ScreenToWorldPoint(newPosition) + _offset;
     }
 
     private void OnMouseUp()
     {
-
+        _activePos = _transform.position;
+        _go = null;
+        _distance = 1000;
+        _indexBoard = 0;
+        _indexData = 0;
     }
 }
