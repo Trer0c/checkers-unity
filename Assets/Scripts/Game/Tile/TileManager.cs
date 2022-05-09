@@ -31,6 +31,22 @@ public class TileManager : MonoBehaviour
     {
         Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f);
         _transform.position = Camera.main.ScreenToWorldPoint(newPosition) + _offset;
+        if (_transform.localPosition.x >= 420)
+        {
+            _transform.localPosition = new Vector3(420, _transform.localPosition.y, _transform.localPosition.z);
+        }
+        else if (_transform.localPosition.x <= -420)
+        {
+            _transform.localPosition = new Vector3(-420, _transform.localPosition.y, _transform.localPosition.z);
+        }
+        if (_transform.localPosition.y >= 420)
+        {
+            _transform.localPosition = new Vector3(_transform.localPosition.x, 420, _transform.localPosition.z);
+        }
+        else if (_transform.localPosition.y <= -420)
+        {
+            _transform.localPosition = new Vector3(_transform.localPosition.x, -420, _transform.localPosition.z);
+        }
     }
 
     private void OnMouseUp()
