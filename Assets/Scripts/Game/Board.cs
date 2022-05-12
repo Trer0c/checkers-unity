@@ -1,5 +1,3 @@
-
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,7 +7,6 @@ public class Board : MonoBehaviour
     public static Board instance;
     public List<GameObject> tilesBoard = new List<GameObject>();
     [SerializeField] private Transform _board;
-
 
     private void Start()
     {

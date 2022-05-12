@@ -57,4 +57,9 @@ public class TileManager : MonoBehaviour
         _indexBoard = 0;
         _indexData = 0;
     }
+
+    private void SwitchTile()
+    {
+        
+    }
 }
